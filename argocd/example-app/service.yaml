@@ -3,10 +3,8 @@ kind: Service
 metadata:
   name: argocd-example-app-service
 spec:
-  type: ClusterIP
   selector:
-    app: argocd-example-app
+    app.kubernetes.io/name: argocd-example-app
   ports:
     - port: 3000
       targetPort: 3000
-      nodePort: 31000 # Optional: Kubernetes will choose a port if this is omitted
