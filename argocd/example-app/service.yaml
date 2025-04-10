@@ -4,7 +4,7 @@ metadata:
   name: argocd-example-app-service
 spec:
   selector:
-    app.kubernetes.io/name: argocd-example-app
+    name: argocd-example-app
   ports:
     - port: 3000
       targetPort: 3000
